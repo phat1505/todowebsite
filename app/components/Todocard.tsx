@@ -26,12 +26,12 @@ export default function Card({ todo, onDelete, onEdit}: TodoCardProps) {
             <span>{todo.status ? "Hoàn thành" : "Chưa xong"}</span>
             <div className="flex justify-center">
                 <img
-                    src="../images/pencil.png"
+                    src="../../images/pencil.png"
                     className="h-6 w-6 mx-2 cursor-pointer"
                     onClick={() => setIsEditing(true)}
                 />
                 <img
-                    src="../images/delete.png"
+                    src="../../images/delete.png"
                     className="h-6 w-6 cursor-pointer"
                     onClick={() => onDelete(todo.id)}
                 />

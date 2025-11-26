@@ -28,7 +28,7 @@ export default function ImportantPage({ searchText, todos, setTodos }: Important
             </div>
             <div className="md:w-5/6 items-start py-2">
                 <div className="flex justify-start">
-                    <img src="../../public/images/sun.png" className="h-7 w-7 mx-1" />
+                    <img src="../../images/sun.png" className="h-7 w-7 mx-1" />
                     <h1 className="text-xl md:text-2xl">My Important Plans</h1>
                 </div>
                 <div className="mt-7 border border-white rounded-xl">
