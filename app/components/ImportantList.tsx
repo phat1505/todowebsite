@@ -32,7 +32,7 @@ export default function ImportantList({ todos, searchText, showImportantOnly = f
                 />
             ))
             ) : (
-                <p>Không tìm thấy kết quả...</p>
+                <p className="p-2">Không tìm thấy kết quả...</p>
             )}
         </div>
     )
