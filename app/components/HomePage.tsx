@@ -48,12 +48,12 @@ export default function HomePage({ searchText, todos, setTodos }: HomePageProps)
             <div className="md:w-5/6 items-start py-2 ">
                 <div className="flex justify-between">
                     <div className="flex justify-center">
-                        <img src="../../public/images/sun.png" className="h-7 w-7 mx-1" />
+                        <img src="../images/sun.png" className="h-7 w-7 mx-1" />
                         <h1 className="md:text-2xl text-xl">My Plans Today</h1>
                     </div>
                     <div className="flex justify-between md:text-xl text-lg bg-green-300 rounded-3xl items-center hover:bg-green-700 p-2">
                         <Link to="#">
-                            <img src="../../public/images/add.png" alt="Add Plan Icon" className="md:w-6 md:h-6 w-4 h-4" />
+                            <img src="../images/add.png" alt="Add Plan Icon" className="md:w-6 md:h-6 w-4 h-4" />
                         </Link>
 
                         <button onClick={() => setIsOpen(true)}
