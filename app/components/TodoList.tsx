@@ -29,7 +29,7 @@ export default function TodoList({todos, searchText, onDelete, onEdit}: TodoProp
                 />
             ))
         ): (
-            <p>Không tìm thấy kết quả...</p>
+            <p className="p-2">Không tìm thấy kết quả...</p>
         )}
         </div>
     )
