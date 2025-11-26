@@ -1,13 +1,19 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import HomePage from "../components/HomePage";
+import { useOutletContext } from "react-router-dom";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+type Context = {
+  todos: any[];
+  setTodos: any;
+  searchText: string;
+};
+
+export function meta() {
+  return [{ title: "Your Plans" }];
+          
 }
 
 export default function Home() {
-  return <Welcome />;
-}
+  const { todos, setTodos, searchText } = useOutletContext<Context>();
+
+  return <HomePage searchText={searchText} todos={todos} setTodos={setTodos} />;
+};
