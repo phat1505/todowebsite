@@ -51,12 +51,12 @@ export default function HomePage({ searchText, todos, setTodos }: HomePageProps)
                         <img src="/images/sun.png" className="h-7 w-7 mx-1" />
                         <h1 className="md:text-2xl text-xl">My Plans Today</h1>
                     </div>
-                    <div className="flex justify-between md:text-xl text-lg bg-green-300 rounded-3xl items-center hover:bg-green-700 p-2">
+                    <div className="flex justify-between md:text-xl text-lg bg-green-300 rounded-3xl items-center hover:bg-green-700 p-2" onClick={() => setIsOpen(true)}>
                         <Link to="#">
                             <img src="/images/add.png" alt="Add Plan Icon" className="md:w-6 md:h-6 w-4 h-4" />
                         </Link>
 
-                        <button onClick={() => setIsOpen(true)}
+                        <button 
                             >Add Plan</button>
                     </div>
                 </div>
