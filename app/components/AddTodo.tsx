@@ -1,4 +1,12 @@
 import { useState, useEffect } from "react";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger
+} from "../components/ui/alert-dialog";
 type Todo = {
     id: number;
     title: string;
@@ -75,17 +83,17 @@ export default function AddTodo({ onAdd, editingTodo, onSave, onClose }: Addtodo
                 Important
             </label>
             <div className="flex gap-3 mt-3">
-                <button 
-                    type="submit" 
+                <button
+                    type="submit"
                     className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
-                > 
+                >
                     {editingTodo ? "Save" : "Add Todo"}
                 </button>
 
-                
+
                 {onClose && (
                     <button
-                        type="button" 
+                        type="button"
                         onClick={onClose}
                         className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition"
                     >

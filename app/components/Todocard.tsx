@@ -1,5 +1,16 @@
 import { useState } from "react";
 import AddTodo from "./AddTodo";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogDescription,
+    AlertDialogContent,
+    AlertDialogTrigger,
+} from "../components/ui/alert-dialog";
 type TodoCardProps = {
     todo: {
     id: number;
@@ -30,11 +41,26 @@ export default function Card({ todo, onDelete, onEdit}: TodoCardProps) {
                     className="h-6 w-6 mx-2 cursor-pointer"
                     onClick={() => setIsEditing(true)}
                 />
+                <AlertDialog>
+                <AlertDialogTrigger>
                 <img
                     src="/images/delete.png"
                     className="h-6 w-6 cursor-pointer"
-                    onClick={() => onDelete(todo.id)}
                 />
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                    <AlertDialogHeader>
+                <AlertDialogTitle>Bạn có chắn chắn xóa Todo này</AlertDialogTitle>
+                <AlertDialogDescription>
+                    Todo này sẽ bị xóa vĩnh viễn
+                </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                <AlertDialogCancel>Quay lại</AlertDialogCancel>
+                <AlertDialogAction onClick={() => onDelete(todo.id)}>Đồng ý</AlertDialogAction>
+                </AlertDialogFooter>
+                </AlertDialogContent>
+                </AlertDialog>
             </div>
 
             {/* Form Edit */}

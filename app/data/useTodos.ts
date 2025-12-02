@@ -1,4 +1,3 @@
-// src/data/useTodos.ts
 import { useState, useEffect } from "react";
 import { todo as initialTodos } from "./todolist";
 
